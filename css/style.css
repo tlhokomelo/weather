@@ -1,0 +1,457 @@
+/*
+*   Tlhokomelo Molokwane
+*   2018 - Front End Assesment
+*
+*/
+
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #fff;
+    font-family: 'Dosis', Helvetica, Arial, sans-serif;
+    font-size: 1.8rem;
+    line-height: 160%;
+    font-weight: 300;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', Helvetica, Arial, sans-serif;
+    color: #919DD0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    font-weight: 700;
+    color: #d14348;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+em {
+    font-weight: 400;
+    font-size: 140%;
+    color: #fff;
+    font-style: normal;
+}
+
+.logo {
+    position: relative;
+    top: -9em;
+}
+
+#settings {
+    /* display:none; */
+}
+
+.header {
+    background: -webkit-linear-gradient( top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/backgrounds/jozi1.jpg);
+    background: linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(../images/backgrounds/jozi1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.header .tagline {
+    display: none;
+    position: relative;
+    top: -18em;
+    right: 0em;
+
+}
+
+.header .tagline p {
+    color: yellow;
+    background-color: #000;
+    width: 10em;
+    opacity: 0.8;
+    padding: 0.3em;
+
+}
+
+@media screen and (min-width: 600px) {
+    .header {
+        background: -webkit-linear-gradient( top, rgba(0, 0, 0, 1), rgba(0, 0, 0, .8)), url(../images/backgrounds/jozi1.jpg);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .8)), url(../images/backgrounds/jozi1.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+
+    }
+    .nav-elements {
+        background: -moz-linear-gradient(left,  rgba(0,0,0,1) 3%, rgba(0,0,0,0.8) 12%, rgba(0,0,0,0.31) 20%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 82%, rgba(0,0,0,0.8) 90%, rgba(0,0,0,1) 95%), url(../images/backgrounds/header_main.jpg); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 3%,rgba(0,0,0,0.8) 12%,rgba(0,0,0,0.31) 20%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 80%,rgba(0,0,0,0) 82%,rgba(0,0,0,0.8) 90%,rgba(0,0,0,1) 95%), url(../images/backgrounds/header_main.jpg); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(0,0,0,1) 3%,rgba(0,0,0,0.8) 12%,rgba(0,0,0,0.31) 20%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 80%,rgba(0,0,0,0) 82%,rgba(0,0,0,0.8) 90%,rgba(0,0,0,1) 95%), url(../images/backgrounds/header_main.jpg); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: auto;
+        margin-top: 5em;
+
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .header .tagline {
+        display: block;
+        color: #fff;
+        max-width: 40em;
+        line-height: 140%;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+    .header .tagline h1 {
+        display: none;
+    }
+    .header .tagline em {
+        font-size: 140%;
+        color: #fff;
+        font-style: normal;
+    }
+}
+
+.nav {
+    margin-top: 1.75rem;
+    /* navelements */
+}
+
+.nav .nav-elements .branding {
+    max-width: 180px;
+    margin: 0 auto;
+}
+
+.nav .nav-elements .navbar {
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+    list-style-type: inherit;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.nav .nav-elements .navbar a {
+    font-weight: 600;
+    color: #fff;
+    line-height: 2.5em;
+    text-decoration: none;
+    padding: 0.5em 1rem;
+    -webkit-transition: 1s ease-out;
+    transition: 1s ease-out;
+    position: relative;
+    left: 2em;
+    top: 0.5em;
+    background-color: black;
+    opacity: 0.8;
+    margin-top: 0.3em;
+}
+
+.nav .nav-elements .navbar a:after {
+    content: '';
+    display:inline;
+    height: 5px;
+    width: 0;
+    margin: 0 .5rem;
+    -webkit-transition: width .3s ease-out, background-color .3s ease-out;
+    transition: width .3s ease-out, background-color .3s ease-out;
+}
+
+.nav .nav-elements .navbar a:hover {
+    color: #f3d350;
+}
+
+.nav .nav-elements .navbar a:hover:after {
+    width: 100%;
+    background: #f3d350;
+}
+
+.weather_status {
+    min-height: 10px;
+}
+
+.forecast-settings {
+    position: absolute;
+    top: 1em;
+    right: 10em;
+}
+
+.forecast-settings a {
+    color: #000;
+    text-decoration: none;
+}
+.forecast, .forecast-settings {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: 350px;
+    min-width: 250px;
+}
+
+.nav .nav-elements .forecast p, .forecast-settings p {
+    text-align: center;
+    margin: 0.4em;
+}
+
+.nav .nav-elements .forecast img, .forecast-settings img {
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    vertical-align: bottom;
+}
+
+.forecast .prefs,
+.forecast .results,
+.forecast-settings .prefs, .forecast-settings .results  {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+}
+
+.nav .nav-elements .forecast .prefs h3,
+.nav .nav-elements .forecast .results h3,
+.forecast-settings .prefs h3, .forecast-settings .results h3 {
+    background-color: black;
+    padding: 0.2em;
+    text-align: center;
+
+}
+
+.nav .nav-elements .forecast .prefs h3,
+.nav .nav-elements .forecast .results h3 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+
+.forecast .prefs,
+.forecast-settings .prefs
+ {
+    border: 1px solid white;
+    text-align: center;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
+.forecast .prefs .hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.forecast .prefs form div {
+    display: inline-block;
+}
+
+.forecast .prefs .conditions .city {
+    font-weight: bold;
+}
+
+.forecast .results {
+    display: none;
+    border: 1px solid white;
+    border-top: none;
+}
+
+.forecast .results .options {
+    text-align: center;
+    border-bottom: 1px solid white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.forecast .results .options div {
+    display: inline-block;
+    width: 33.33%;
+    padding: 0.25em 1em;
+    margin: 0;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.forecast .results .options #team {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.forecast .results .options div:hover {
+    background-color: white;
+}
+
+.forecast .results .options .selected {
+    background-color: #bfc406;
+}
+
+.forecast .results .options .selected:hover {
+    background-color: #bfc406;
+}
+
+.forecast {
+    margin: 0 auto;
+    top: 4em;
+    position: relative;
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
+@media screen and (min-width: 600px) {
+    .nav .nav-elements {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nav .nav-elements .branding {
+        width: 30%;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nav .nav-elements .forecast {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .nav .nav-elements .navbar {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+.section .headline {
+
+}
+
+.section a,
+.section em {
+
+}
+
+@media screen and (min-width: 600px) {
+    .section {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+
+@-webkit-keyframes a {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+@keyframes a {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
