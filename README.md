@@ -1,8 +1,6 @@
 # Weather Widget.
 
-# Project Title
-
-Front End Built from PSD
+Frontend Built from PSD.
 
 ## Getting Started
 
