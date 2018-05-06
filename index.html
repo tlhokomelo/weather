@@ -1,44 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en-US">
 
-<!-- /*
-      *   Tlhokomelo Molokwane
-      *   2018 - Front End Assesment
-      *
-*/ -->
-
-
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Assesment - Frontend, JS Public API</title>
-  <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,800" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/web-fonts-with-css/css/fontawesome-all.min.css" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Frontend Assesment</title>
+    <meta name="description" content="Various flexible box menu demos from Morten Rand-Hendriksen, staff author at lynda.com"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,800" rel="stylesheet">
+    <link rel="stylesheet" href="style-holy-grail.css" type="text/css" media="all">
+    <link rel="stylesheet" href="boilerplate-styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/web-fonts-with-css/css/fontawesome-all.min.css" >
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+
 </head>
+
 <body>
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-<header id="home" class="header">
-  <nav class="nav" role="navigation">
-
-    <div class="container nav-elements">
-
-      <div class="branding">
-        <a href="#home" class="logo"><img src="images/travelleisurelogo.svg" alt="Travel Leisure Logo"></a>
-
-        <ul class="navbar">
-            <li><a href="#book">Book Now</a></li>
-            <li><a href="#more">More Info</a></li>
-        </ul><!-- navbar -->
-
-      <div class="forecast-settings">
-        <div class="prefs">
-            <p>
-            <i class="fas fa-compass"></i>
-              <a class="toggle" href="#settings">Settings</a>
-            </p>
-
-            <div class="toggle-content" id="settings">
+    <header class="masthead clear">
+      <div class="sidebar-switcher">
+          Settings:
+          <a href="#" class="hide-sidebar-toggle">
+            <i class="fa fa-cogs"></i>
+            <span class="screen-reader-text">Show settings</span>
+          </a>
+      </div><!-- .sidebar-switcher -->
+        <div class="centered">
+          <div class="sidebar hide">
+            <div class="config">
                 <form>
                 <h3>Configure Forecaster</h3>
                 <div>
@@ -50,30 +42,134 @@
                 </div>
               </form>
             </div>
+          </div><!-- .sidebar -->
+          <a href="#home" class="logo"><img src="images/travelleisurelogo.svg" alt="Travel Leisure logo"></a>
 
-        </div><!-- prefs -->
+            <div class="site-branding">
+              <div class="header-image">
+                <div class="header-content">
+                  <div class="titles">
+                  <p class="title-one">Your dream holiday
+                    <br />
+                    Awaits
+                  </p>
+                  <p class="title-two">Book a holiday of a
+                    <br />
+                    lifetime now!
+                  </p>
+                  <nav id="single-nav" class="single-nav menu" role="navigation">
+                      <ul>
+                          <li><a href="#" class="btn-blue">Book Now</a></li>
+                          <li><a href="#" class="btn-green">More Info</a></li>
+                      </ul>
+                  </nav><!-- #single-nav .single-nav -->
+                </div><!-- .titles -->
+                <div class="weather-wedget">
+                  <div class="location">
+                    <p class="location_title">
+                      <p class="conditions"></p>
+                      <div class="temperature conditions weather_status"></div>
+                    </p>
+                  </div><!-- .location -->
 
-      </div><!-- forecast settings -->
+                  <div class="openweathermap-logo">
+                    <img src="images/openweathermap-logo.png" alt="openweathermap logo" title="openweathermap logo" />
+                  </div><!-- .openweathermap-logo -->
+                </div><!-- .weather-wedget -->
+              </div><!-- .header-content -->
+            </div><!-- .header-image -->
+            </div><!-- .site-title -->
+        </div><!-- .centered -->
+    </header><!-- .masthead -->
 
+    <main class="main-area">
 
-    </div><!-- container nav-elements -->
-    <div class="forecast">
-      <div class="prefs">
+        <div class="centered">
+            <section class="menu-section">
+                <nav id="advanced-nav" class="advanced-nav menu first-level" role="navigation">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="button-text">
+                                    <p>1</p>
+                                    <span>Book your flights</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="button-text">
+                                    <p>2</p>
+                                    <span>Book your destination</span>
+                                </div>
+                            </a>
+                        </li>
 
-          <h3 class="location_title"> Forecast</h3>
+                        <li>
+                            <a href="#">
+                                <div class="button-text">
+                                    <p>3</p>
+                                    <span>Book car hire</span>
+                                </div>
+                            </a>
+                        </li>
 
-          <div class="weather_status"></div>
+                    </ul>
+                </nav><!-- #advanced-nav .advanced-nav -->
+            </section><!-- .menu-section -->
 
-      </div><!-- prefs -->
+            <section class="menu-section">
+                <nav id="advanced-nav" class="advanced-nav menu second-level" role="navigation">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="button-text">
+                                    <p>Cheapest Flights</p>
+                                    <span class="icon"><i class="fa fa-plane fa-7x"></i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="button-text">
+                                    <p>Great Prices</p>
+                                    <span class="icon"><i class="fa fa-money-bill-alt fa-7x"></i></span>
+                                </div>
+                            </a>
+                        </li>
 
-    </div><!-- forecast -->
-  </nav>
+                        <li>
+                            <a href="#">
+                                <div class="button-text">
+                                    <p>Amazing Accomodation</p>
+                                    <span class="icon"><i class="fa fa-bed fa-7x"></i></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="button-text">
+                                    <p>Car hire at a great price</p>
+                                    <span class="icon"><i class="fa fa-car fa-7x"></i></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav><!-- #advanced-nav .advanced-nav -->
+            </section><!-- .menu-section -->
 
-</header><!-- #home -->
+        </div><!-- .centered -->
 
+    </main>
 
+    <footer class="footer-area">
+        <div class="centered">
 
-<script src="js/babel.js"></script>
-<script src="js/script.js" type="text/babel"></script>
+        </div><!-- .centered -->
+    </footer>
+    <script type="text/javascript" src="js/libs/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/sidebar-switcher.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>

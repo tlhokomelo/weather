@@ -44,13 +44,19 @@
 
 		const into = document.querySelector('.weather_status');
 			let forecastTitle = document.querySelector('.location_title');
+			let forecastConditions = document.querySelector('.conditions');
 			let container = document.createElement('div');
 			let cityPara = document.createElement('p');
 				cityPara.setAttribute('class','city');
-				forecastTitle.textContent = (state.city +" Forecast.");
+				forecastTitle.textContent = (state.city);
+				forecastTitle.setAttribute('class','forecast_city');
+				forecastConditions.textContent = (state.condition);
+				// DEBUG:
 				cityPara.textContent = state.city;
 
+
 			let weather_statusPara = document.createElement('p');
+			weather_statusPara.setAttribute('class','temperature');
 
 				weather_statusPara.textContent = `${state.degCInt}\u00B0 C / ${state.degFInt}\u00B0 F`;
 			let iconImage = document.createElement('img');
@@ -75,43 +81,6 @@
 	function UIupdate_failure() {
 		document.querySelector(".weather_status").textContent = "Sorry. Weather information is not available.";
 	}
-
-var show = function (elem) {
-	elem.style.display = 'block';
-};
-
-var hide = function (elem) {
-	elem.style.display = 'none';
-};
-
-var toggle = function (elem) {
-	if (window.getComputedStyle(elem).display === 'block') {
-		hide(elem);
-		return;
-	} else {
-		show(elem);
-	}
-
-
-};
-
-document.addEventListener('click', function (event) {
-
-	if (!event.target.classList.contains('toggle')) return;
-	event.preventDefault();
-
-	var content = document.querySelector(event.target.hash);
-	if (!content) return;
-
-	toggle(content);
-
-}, false);
-
-
-
-
-
-
 
 
 
